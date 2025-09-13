@@ -198,12 +198,6 @@ checksum = "cd945864f07fe9f5371a27ad7b52a172b4b499999f1d97574c9fa68373937e12"
 [[package]]
 name = "memchr"
 version = "2.7.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "32a282da65faaf38286cf3be983213fcf1d2e2a58700e808f83f4ea9a4804bc0"
-
-[[package]]
-name = "memchr"
-version = "2.7.5"
 source = "git+https://github.com/neuschaefer/rust-memchr?branch=a64be#717f8494f4d7045680376507e2e36e4ce4aa1d97"
 
 [[package]]
@@ -214,7 +208,6 @@ dependencies = [
  "clap",
  "dunce",
  "itertools",
- "memchr 2.7.5 (git+https://github.com/neuschaefer/rust-memchr?branch=a64be)",
  "path_macro",
  "rustc_version",
  "serde",
@@ -338,7 +331,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "30b9eff21ebe718216c6ec64e1d9ac57087aad11efc64e32002bce4a0d4c03d3"
 dependencies = [
  "itoa",
- "memchr 2.7.5 (registry+https://github.com/rust-lang/crates.io-index)",
+ "memchr",
  "ryu",
  "serde",
 ]

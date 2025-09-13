@@ -25,4 +25,3 @@ features = ["search"]
 [patch.crates-io]
 memchr = { version = "2.7.5", git = "https://github.com/neuschaefer/rust-memchr", branch = "a64be" }
 rustix = { version = "1.1.2", git = "https://github.com/neuschaefer/rustix", branch = "a64be-1.1.2" }
-linux-raw-sys = { version = "0.11.0", git = "https://github.com/neuschaefer/linux-raw-sys", branch = "a64be-0.11.0" }
