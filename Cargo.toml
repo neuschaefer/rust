@@ -93,3 +93,4 @@ codegen-units = 1
 # For git dependencies, also add your source to ALLOWED_SOURCES in src/tools/tidy/src/extdeps.rs.
 [patch.crates-io]
 memchr = { version = "2.7.5", git = "https://github.com/neuschaefer/rust-memchr", branch = "a64be" }
+rustix = { version = "1.0.8", git = "https://github.com/neuschaefer/rustix", branch = "a64be-1.0.8" }
