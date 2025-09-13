@@ -2183,8 +2183,7 @@ dependencies = [
 [[package]]
 name = "linux-raw-sys"
 version = "0.9.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cd945864f07fe9f5371a27ad7b52a172b4b499999f1d97574c9fa68373937e12"
+source = "git+https://github.com/neuschaefer/linux-raw-sys?branch=a64be-0.9.4#ed468bcbc306d6ede9889e821e8f64a79362ddc7"
 
 [[package]]
 name = "litemap"
