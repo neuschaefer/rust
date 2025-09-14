@@ -6,7 +6,7 @@ use std::path::PathBuf;
 
 use crate::core::build_steps::tool::SUBMODULES_FOR_RUSTBOOK;
 use crate::core::builder::{Builder, RunConfig, ShouldRun, Step};
-use crate::utils::exec::command;
+//use crate::utils::exec::command;
 
 /// The name of the directory where vendored dependencies are stored.
 pub const VENDOR_DIR: &str = "vendor";
@@ -75,7 +75,8 @@ impl Step for Vendor {
     /// are initialized before vendoring begins.
     fn run(self, builder: &Builder<'_>) -> Self::Output {
         builder.info(&format!("Vendoring sources to {:?}", self.root_dir));
-
+        return VendorOutput { config: "lol no".into() };
+/*
         let mut cmd = command(&builder.initial_cargo);
         cmd.arg("vendor");
 
@@ -110,6 +111,7 @@ impl Step for Vendor {
 
         let config = cmd.run_capture_stdout(builder);
         VendorOutput { config: config.stdout() }
+*/
     }
 }
 

@@ -12,6 +12,7 @@ pub enum Error {
     #[error("Failed get output from cargo-metadata: {0:?}")]
     GettingMetadata(#[from] cargo_metadata::Error),
     #[error("Bad path {0:?} whilst scraping files")]
+    #[allow(dead_code)]
     Scraping(PathBuf),
 }
 
@@ -47,16 +48,16 @@ pub struct PackageMetadata {
 pub fn get_metadata_and_notices(
     cargo: &Path,
     cargo_home_path: &Path,
-    vendor_path: &Path,
+    _vendor_path: &Path,
     root_path: &Path,
     manifest_paths: &[PathBuf],
 ) -> Result<BTreeMap<Package, PackageMetadata>, Error> {
-    let mut output = get_metadata(cargo, cargo_home_path, root_path, manifest_paths)?;
+    let output = get_metadata(cargo, cargo_home_path, root_path, manifest_paths)?;
 
     // Now for each dependency we found, go and grab any important looking files
-    for (package, metadata) in output.iter_mut() {
+    /*for (package, metadata) in output.iter_mut() {
         load_important_files(package, metadata, &vendor_path)?;
-    }
+    }*/
 
     Ok(output)
 }
@@ -113,6 +114,7 @@ pub fn get_metadata(
 ///
 /// Maybe one-day Cargo.toml will contain enough information that we don't need
 /// to do this manual scraping.
+#[allow(unused)]
 fn load_important_files(
     package: &Package,
     dep: &mut PackageMetadata,
